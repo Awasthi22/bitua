@@ -1,0 +1,35 @@
+/* navbar */
+.navbar-inverse {
+    background-color: #404040;
+    border-color: #404040;
+}
+
+.mainbody{
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.colorMeBright{
+    background-color: #FFE658;
+    border-color: #FFE658;
+}
+
+.colorMeNormal{
+    background-color: #FFE658;
+    border-color: #FFE658;
+}
+
+.colorMeEven{
+    background-color: #B71427;
+    border-color: #B71427;
+}
+
+.colorMeOdd{
+    background-color: #6DBDD6;
+    border-color: #6DBDD6;
+}
+
+.BituaColorTextOverride{
+    
+    color: white !important;
+}

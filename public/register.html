@@ -1,0 +1,31 @@
+<div class="container" ng-controller="registerController">
+    <div class="container col-sm-4"/>
+    <div class="panel panel-default colorMeNormal col-sm-4 ">
+        <div class="panel-body">
+            <form class="form-auth" ng-submit="register()">
+                <p class="text-info">New to Bitua? <strong>Register</strong> </p>
+               <hr>
+	           <input type="username" ng-model="user.username" placeholder="Username" class="form-control"><br>
+               <input type="email" ng-model="user.emailid" placeholder="Email" class="form-control"><br>
+	           <input type="password" ng-model="user.password" placeholder="Password" class="form-control"><br>
+               <input type="password" ng-model="user.confirmPassword" placeholder="Confirm Password" class="form-control"><br>
+               <hr>
+               <div class ="row">
+                   <div class ="col-sm-6">	               
+                       <input type="submit" value="Register" class="btn btn-primary" />
+                   </div>
+                   <div class ="col-sm-6 small">
+                        <p>Already registered?</p> 
+                        <p>click <a href="#/login">here</a> to login</p>
+                   </div>
+               </div>
+               <div class ="row">    
+                   <p class="small">By registering, you agree to the <a href='#/useragreement'>Terms of Service</a> and <a href='#/privacypolicy'>Privacy Policy</a>, including <a href='#/cookiepolicy'>Cookie Use</a>.  </p>
+               </div>
+               <p class="text-danger"><strong>{{error_message}}</strong></p>
+
+            </form>
+        </div>
+    </div>
+    <div class="container col-sm-4"/>
+</div>

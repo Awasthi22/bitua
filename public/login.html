@@ -1,0 +1,27 @@
+<div class="container" ng-controller="loginController">
+    <div class="container col-sm-4"/>
+    <div class="panel panel-default colorMeNormal col-sm-4">
+        <div class="panel-body">
+            <form class="form-auth" ng-submit="login()">
+               <p class="text-info"><strong>Log in</strong> </p>
+               <hr>
+	           <input type="username" ng-model="user.username" placeholder="Username" class="form-control"><br>
+	           <input type="password" ng-model="user.password" placeholder="Password" class="form-control"><br>
+               <hr>
+               <div class ="row">
+                   <div class ="col-sm-6">	               
+                       <input type="submit" value="Log in" class="btn btn-primary" />
+                   </div>
+                   <div class ="col-sm-6 small">
+                        <p>Not registered?</p> 
+                        <p>click <a href="#/register">here</a> to register</p>
+                   </div>
+                </div>
+               <p class="text-danger">{{error_message}}</p>
+
+            </form>
+        </div>
+    </div>
+    <div class="container col-sm-4"/>
+</div>
+

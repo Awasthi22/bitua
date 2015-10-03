@@ -1,0 +1,48 @@
+doctype html
+
+html
+
+    head
+  
+        title Bitua
+        
+        link(href="img/favicon.ico" rel="shortcut icon" type="image/x-icon")
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+        link(rel='stylesheet', href='stylesheets/style.css')
+    
+    body(class="mainbody", ng-app="bituaApp")
+  
+        //Header
+        div(class="navbar navbar-inverse navbar-static-top")
+            div(class="container")
+                a(href='#',class="pull-left")
+                    img(src="/img/bitua-small.png")
+                p(class="navbar-text navbar-right BituaColorTextOverride")
+                    strong {{current_user}}
+                a(href='#/about',class="navbar-text navbar-right",ng-hide='authenticated') About
+                a(href='#',class="navbar-text navbar-right ",ng-click="signout()", ng-show='authenticated') Logout
+                    span(class="glyphicon glyphicon-triangle-bottom")
+                a(href='#',class="navbar-text navbar-left glyphicon glyphicon-home") Home   
+                    
+        
+        //The main view to be populated by angular
+        div(class="container")
+            div(ng-view="")
+                
+        //Footer
+        div(class="navbar navbar-default navbar-fixed-bottom")
+            div(class="container")
+                a(href='#/useragreement',class="navbar-text") User Agreement
+                a(href='#/privacypolicy',class="navbar-text") Privacy Policy
+                a(href='#/cookiepolicy',class="navbar-text") Cookie Policy
+                a(href='#/contact',class="navbar-text") Contact Us
+                
+
+ 
+        //js scripts all go here
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')        
+        script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js')
+        script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.js')
+        script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-resource.js')
+        script(src='javascripts/bituaApp.js')
